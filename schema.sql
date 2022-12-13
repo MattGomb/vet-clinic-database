@@ -1,7 +1,5 @@
 /*create table day 1 */
 
-/*update table with species day 2 */
-
 CREATE TABLE animals(
   id INT NOT NULL,
   name TEXT,
@@ -9,5 +7,8 @@ CREATE TABLE animals(
   escape_attempts INT,
   neutered BOOLEAN,
   weight_kg DECIMAL,
+  
+  /*update table with species day 2 */
+  
   species TEXT
 );
