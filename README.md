@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="src\assets\mirco-readme-logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./mirco-readme-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
 </div>
