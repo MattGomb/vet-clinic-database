@@ -1,5 +1,3 @@
-/* Populate database with sample data. */
-
 /*create table day 1 */
 
 INSERT INTO animals VALUES (1, 'Agumon', '2020-02-03', 0, true, 10.23);

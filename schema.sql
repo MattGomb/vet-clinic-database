@@ -1,5 +1,3 @@
-/* Database schema to keep the structure of entire database. */
-
 /*create table day 1 */
 
 CREATE TABLE animals(
