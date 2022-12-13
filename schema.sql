@@ -1,9 +1,10 @@
-/* Database schema to keep the structure of entire database. */
+/*create table day 1 */
 
-postgres=# CREATE TABLE animals(
-postgres(# id INT PRIMARY KEY NOT NULL,
-postgres(# name TEXT NOT NULL,
-postgres(# date_of_birth DATE,
-postgres(# escape_attempts INT NOT NULL,
-postgres(# neutered BOOL,
-postgres(# weight_kg DECIMAL);
+CREATE TABLE animals(
+  id INT NOT NULL,
+  name TEXT,
+  date_of_birth DATE,
+  escape_attempts INT,
+  neutered BOOLEAN,
+  weight_kg DECIMAL
+);
