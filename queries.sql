@@ -64,3 +64,17 @@ SELECT species.name, COUNT(species_id) FROM animals FULL JOIN species ON animals
 SELECT name FROM animals FULL JOIN owners ON animals.owner_id = owners.id WHERE owners.id = 2 AND animals.species_id = 2;
 SELECT name FROM animals FULL JOIN owners ON animals.owner_id = owners.id WHERE owners.id = 5 AND animals.escape_attempts = 0;
 SELECT full_name FROM owners INNER JOIN animals ON owners.id = animals.owner_id GROUP BY owners.full_name ORDER BY COUNT(*) DESC LIMIT 1;
+
+/* many-to-many tables day 4 */
+
+/* queries to answer the questions */
+SELECT name FROM animals JOIN visits ON animals.id = visits.animal_id WHERE vets_id = 1 ORDER BY date_of_visit DESC LIMIT 1;
+SELECT COUNT(DISTINCT(animal_id)) FROM visits WHERE vets_id = 3;
+SELECT vets.name, species.name FROM vets LEFT JOIN specializations ON vets_id = vets.id LEFT JOIN species ON species.id = species_id;
+SELECT name FROM animals JOIN visits ON animals.id = animal_id WHERE vets_id = 3 AND date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+SELECT name FROM animals LEFT JOIN visits ON id = animal_id GROUP BY animals.name ORDER BY COUNT(animal_id) DESC LIMIT 1;
+SELECT name FROM animals LEFT JOIN visits ON id = animal_id WHERE visits.vets_id = 2 GROUP BY animals.name, visits.date_of_visit ORDER BY date_of_visit ASC LIMIT 1;
+SELECT a.id, a.name, a.date_of_birth AS "birthday", a.neutered, a.escape_attempts, a.weight_kg AS "weight", a.species_id, a.owner_id, ve.id AS "vet id", ve.name AS "vet name", ve.age, ve.date_of_graduation, vi.date_of_visit AS "animal's last visit" FROM animals a FULL JOIN visits vi ON a.id = vi.animal_id FULL JOIN vets ve ON vi.vets_id = ve.id ORDER BY date_of_visit DESC LIMIT 1;
+SELECT COUNT(animal_id) FROM visits INNER JOIN animals ON animals.id = visits.animal_id INNER JOIN vets ON vets.id = visits.vets_id LEFT JOIN specializations ON specializations.vets_id = visits.vets_id WHERE animals.species_id != specializations.species_id AND vets.id!=3 OR vets.id = 2;
+SELECT species.name FROM visits INNER JOIN animals ON animals.id = visits.animal_id INNER JOIN vets ON vets.id = visits.vets_id INNER JOIN species ON species.id = species_id WHERE vets.name = 'Maisy Smith' GROUP BY species.name ORDER BY COUNT(animals.species_id) DESC LIMIT 1;
+
