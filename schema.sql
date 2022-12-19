@@ -61,3 +61,8 @@ CREATE TABLE visits(
   CONSTRAINT fk_animal FOREIGN KEY (animal_id) REFERENCES animals(id),
   CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets(id)
   );
+  
+/* Vet clinic database: database performance audit */
+  
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
