@@ -77,3 +77,15 @@ SELECT name FROM animals LEFT JOIN visits ON id = animal_id WHERE visits.vets_id
 SELECT a.id, a.name, a.date_of_birth AS "birthday", a.neutered, a.escape_attempts, a.weight_kg AS "weight", a.species_id, a.owner_id, ve.id AS "vet id", ve.name AS "vet name", ve.age, ve.date_of_graduation, vi.date_of_visit AS "animal's last visit" FROM animals a FULL JOIN visits vi ON a.id = vi.animal_id FULL JOIN vets ve ON vi.vets_id = ve.id ORDER BY date_of_visit DESC LIMIT 1;
 SELECT COUNT(animal_id) FROM visits INNER JOIN animals ON animals.id = visits.animal_id INNER JOIN vets ON vets.id = visits.vets_id LEFT JOIN specializations ON specializations.vets_id = visits.vets_id WHERE animals.species_id != specializations.species_id AND vets.id!=3 OR vets.id = 2;
 SELECT species.name FROM visits INNER JOIN animals ON animals.id = visits.animal_id INNER JOIN vets ON vets.id = visits.vets_id INNER JOIN species ON species.id = species_id WHERE vets.name = 'Maisy Smith' GROUP BY species.name ORDER BY COUNT(animals.species_id) DESC LIMIT 1;
+
+/* Vet clinic database: database performance audit */
+
+/* queries that supposed to take more than 1000ms to finish */
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vet_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+/* checking the query plans */
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
