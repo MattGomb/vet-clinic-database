@@ -64,7 +64,7 @@ CREATE TABLE visits(
 
 /* Vet clinic database: database performance audit */
 
-ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+/* ALTER TABLE owners ADD COLUMN email VARCHAR(120); */
 
 /* making the queries faster */
 CREATE INDEX animal_id_asc ON visits2(animal_id ASC);
