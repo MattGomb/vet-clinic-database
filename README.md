@@ -14,22 +14,12 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
   - [Documentation](#documentation)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -41,28 +31,18 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href=""></a></li>
-  </ul>
+  <li><a href="https://www.postgresql.org/">postgreSQL</a></li>
 </details>
-
-<!-- Features -->
-
-### Key Features <a name="key-features"></a>
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Project Documentation <a name="documentation"></a>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+In this project I created the database of an imaginary vet clinic. There are tables for animals, species of animals, vets, specializations of vets, owners, and visits to vets. In the documentation queries.sql we can find some pre-written queries to get some detailed information. The below diagram represents the database: 
 
-<!-- LIVE DEMO -->
+<img src="./drawSQL-export-2022-12-20_11_43.png" alt="logo" />
+<br/>
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Click here to be amazed!]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
