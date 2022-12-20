@@ -57,14 +57,14 @@ CREATE TABLE visits(
   animal_id INT,
   vets_id INT
   date_of_visit DATE,
-  PRIMARY KEY(animal_id, vets_id),
+  PRIMARY KEY(animal_id, vets_id, date_of_visit),
   CONSTRAINT fk_animal FOREIGN KEY (animal_id) REFERENCES animals(id),
   CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets(id)
   );
 
 /* Vet clinic database: database performance audit */
 
-/* ALTER TABLE owners ADD COLUMN email VARCHAR(120); */
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
 /* making the queries faster */
 CREATE INDEX animal_id_asc ON visits2(animal_id ASC);
