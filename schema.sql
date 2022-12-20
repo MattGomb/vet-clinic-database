@@ -7,9 +7,9 @@ CREATE TABLE animals(
   escape_attempts INT,
   neutered BOOLEAN,
   weight_kg DECIMAL,
-  
+
   /*update table with species day 2 */
-  
+
   species TEXT
 );
 
@@ -21,7 +21,7 @@ CREATE TABLE owners(
   age INT,
   PRIMARY KEY (id)
   );
-  
+
 CREATE TABLE species(
   id INT GENERATED ALWAYS AS IDENTITY,
   name VARCHAR(255),
@@ -52,7 +52,7 @@ CREATE TABLE specializations(
   CONSTRAINT fk_species FOREIGN KEY (species_id) REFERENCES species(id),
   CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets(id)
   );
-  
+
 CREATE TABLE visits(
   animal_id INT,
   vets_id INT
@@ -61,8 +61,13 @@ CREATE TABLE visits(
   CONSTRAINT fk_animal FOREIGN KEY (animal_id) REFERENCES animals(id),
   CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets(id)
   );
-  
+
 /* Vet clinic database: database performance audit */
-  
+
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+/* making the queries faster */
+CREATE INDEX animal_id_asc ON visits2(animal_id ASC);
+CREATE INDEX vet_id_asc ON visits2(vets_id ASC);
+CREATE INDEX email_asc ON owners(email ASC);
 
