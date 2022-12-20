@@ -14,9 +14,7 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
   - [Documentation](#documentation)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -41,28 +39,12 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href=""></a></li>
-  </ul>
+  <li><a href="https://www.postgresql.org/">postgreSQL</a></li>
 </details>
-
-<!-- Features -->
-
-### Key Features <a name="key-features"></a>
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Project Documentation <a name="documentation"></a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Click here to be amazed!]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
